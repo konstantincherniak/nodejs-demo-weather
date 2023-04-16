@@ -1,6 +1,4 @@
-const getArgs = (args) => {
-  const [, , ...rest] = args;
-
+const getArgs = ([, , ...rest]) => {
   return rest.reduce((acc, value, index, array) => {
     if (value.charAt(0) === "-") {
       if (index === array.length - 1) {
